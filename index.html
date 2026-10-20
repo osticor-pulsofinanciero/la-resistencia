@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a2540" />
+  <meta name="description" content="TCP La Resistencia — Empresa de viajes en ómnibus desde Cárdenas, Matanzas, hacia Santiago de Cuba, La Habana, Sagua, Universidad de Matanzas, Varadero y más. Comodidad, los mejores precios y reservas con la APK OSTIKEC." />
+  <title>TCP La Resistencia | Viajes en ómnibus desde Cárdenas, Matanzas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ BARRA DE PROGRESO ============ -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============ BOTÓN MENÚ (esquina superior izquierda) ============ -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sideMenu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ============ OVERLAY ============ -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ============ MENÚ LATERAL ESCALABLE ============ -->
+  <aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="side-menu__top">
+      <div class="brand">
+        <span class="brand__mark">TCP</span>
+        <div class="brand__txt">
+          <strong>TCP La Resistencia</strong>
+          <small>Viajes en ómnibus</small>
+        </div>
+      </div>
+      <button class="side-menu__close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+
+    <nav class="side-nav" aria-label="Navegación principal">
+      <a href="#inicio"     class="side-nav__link is-active">Inicio</a>
+      <a href="#acerca"     class="side-nav__link">Acerca de</a>
+      <a href="#mision"     class="side-nav__link">Misión y Visión</a>
+      <a href="#rutas"      class="side-nav__link">Rutas</a>
+      <a href="#comodidad"  class="side-nav__link">Comodidad y Precios</a>
+      <a href="#ostikec"    class="side-nav__link">APK OSTIKEC</a>
+      <a href="#equipo"     class="side-nav__link">Nuestro Equipo</a>
+      <a href="#contacto"   class="side-nav__link">Contacto</a>
+      <!-- Aquí puedes ir añadiendo más opciones en el futuro -->
+    </nav>
+
+    <div class="side-menu__cta">
+      <p>Reserva ahora por WhatsApp</p>
+      <a class="btn btn--wa btn--full" href="https://wa.me/5358213831" target="_blank" rel="noopener">+53 5 821 3831</a>
+      <a class="btn btn--ghost btn--full" href="https://wa.me/5352475989" target="_blank" rel="noopener">+53 5 247 5989</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="glow glow--red"></span>
+        <span class="glow glow--blue"></span>
+        <span class="hero__grid"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="pill reveal">Cárdenas · Matanzas · Cuba</span>
+
+          <h1 class="hero__title reveal" style="--d:80ms">
+            <small class="hero__prefix">TCP</small>
+            La <span class="hl">Resistencia</span>
+          </h1>
+
+          <p class="hero__claim reveal" style="--d:160ms">Tu viaje, nuestra fuerza.</p>
+
+          <p class="hero__desc reveal" style="--d:240ms">
+            Viajes en ómnibus cómodos, seguros y con los mejores precios desde Cárdenas
+            hacia Santiago de Cuba, La Habana, Sagua, la Universidad de Matanzas, Varadero
+            y los principales puntos turísticos y recreativos del país.
+          </p>
+
+          <div class="hero__actions reveal" style="--d:320ms">
+            <a href="#rutas" class="btn btn--primary">Ver rutas disponibles</a>
+            <a href="https://wa.me/5358213831" target="_blank" rel="noopener" class="btn btn--wa">
+              Reservar por WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero__badges reveal" style="--d:400ms">
+            <li>Comodidad garantizada</li>
+            <li>Los mejores precios</li>
+            <li>Reservas con OSTIKEC</li>
+          </ul>
+        </div>
+
+        <div class="hero__art reveal reveal--right" style="--d:220ms">
+          <div class="hero__art-inner">
+            <!-- Ómnibus ilustrado -->
+            <svg class="bus" viewBox="0 0 520 330" role="img" aria-label="Ilustración de un ómnibus de TCP La Resistencia">
+              <defs>
+                <linearGradient id="busBody" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ef4b57" />
+                  <stop offset="1" stop-color="#b30f1b" />
+                </linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#d8f2ff" stop-opacity=".95" />
+                  <stop offset="1" stop-color="#6fb8e8" stop-opacity=".8" />
+                </linearGradient>
+              </defs>
+
+              <ellipse cx="262" cy="300" rx="205" ry="16" fill="#000" opacity=".28" />
+
+              <rect x="48" y="64" width="424" height="190" rx="28" fill="url(#busBody)" />
+              <rect x="48" y="196" width="424" height="30" fill="#0d3b66" />
+              <rect x="48" y="232" width="424" height="10" fill="#ffc300" opacity=".92" />
+
+              <rect x="72" y="88" width="84" height="78" rx="12" fill="url(#glass)" />
+              <rect x="168" y="88" width="84" height="78" rx="12" fill="url(#glass)" />
+              <rect x="264" y="88" width="84" height="78" rx="12" fill="url(#glass)" />
+              <rect x="360" y="88" width="86" height="78" rx="12" fill="url(#glass)" />
+
+              <text x="260" y="217" text-anchor="middle" font-family="Outfit, sans-serif"
+                    font-size="15" font-weight="800" fill="#ffffff" letter-spacing="2.5">TCP LA RESISTENCIA</text>
+
+              <rect x="454" y="140" width="16" height="28" rx="8" fill="#ffc300" />
+
+              <circle cx="152" cy="266" r="36" fill="#08131f" />
+              <circle cx="152" cy="266" r="15" fill="#93a8bd" />
+              <circle cx="398" cy="266" r="36" fill="#08131f" />
+              <circle cx="398" cy="266" r="15" fill="#93a8bd" />
+            </svg>
+
+            <span class="badge-float badge-float--1">Comodidad</span>
+            <span class="badge-float badge-float--2">Mejores precios</span>
+            <span class="badge-float badge-float--3">OSTIKEC</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#acerca" class="hero__scroll" aria-label="Bajar a la siguiente sección">
+        Desliza <span></span>
+      </a>
+    </header>
+
+    <!-- ================= CINTA DE MENSAJES ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Comodidad que se siente</span><b>•</b>
+          <span>Los mejores precios de la zona</span><b>•</b>
+          <span>Reserva fácil con la APK OSTIKEC</span><b>•</b>
+          <span>De Cárdenas hacia toda Cuba</span><b>•</b>
+          <span>Puntualidad que cumple</span><b>•</b>
+        </div>
+        <div class="marquee__group">
+          <span>Comodidad que se siente</span><b>•</b>
+          <span>Los mejores precios de la zona</span><b>•</b>
+          <span>Reserva fácil con la APK OSTIKEC</span><b>•</b>
+          <span>De Cárdenas hacia toda Cuba</span><b>•</b>
+          <span>Puntualidad que cumple</span><b>•</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= ESTADÍSTICAS ================= -->
+    <section class="stats">
+      <div class="container stats__grid" data-stagger>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="15" data-suffix="+">0</span>
+          <p>Rutas y destinos</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="100" data-suffix="%">0</span>
+          <p>Comodidad garantizada</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="24" data-suffix="/7">0</span>
+          <p>Reservas con OSTIKEC</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2" data-suffix="">0</span>
+          <p>Canales de WhatsApp</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACERCA DE / VALORES ================= -->
+    <section class="section section--crema" id="acerca">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Acerca de</span>
+          <h2 class="section-title">Más que un viaje, <span class="hl">una experiencia</span></h2>
+          <p class="section-sub">
+            En <strong>TCP La Resistencia</strong> llevamos a las personas a donde necesitan llegar,
+            con la tranquilidad de un servicio serio, cómodo y al alcance de todos. Somos una
+            empresa matancera que crece junto a sus pasajeros.
+          </p>
+        </div>
+
+        <div class="cards" data-stagger>
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            </span>
+            <h3>Compromiso</h3>
+            <p>Cumplimos lo que prometemos: si reservaste, sales. Tu tiempo y tu confianza son lo primero.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3>Puntualidad</h3>
+            <p>Salidas y llegadas a la hora prevista. Planifica tu día con la seguridad de llegar a tiempo.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-3 7.5-7 9-4-1.5-7-4.8-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Seguridad</h3>
+            <p>Ómnibus revisados y conductores responsables para que cada tramo se disfrute tranquilo.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 0-3.2 6.4"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            </span>
+            <h3>Precios justos</h3>
+            <p>Tarifas claras y competitivas. La mejor relación entre calidad y precio de la región.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </span>
+            <h3>Trato humano</h3>
+            <p>Te conocemos, te escuchamos y te atendemos como parte de la familia TCP La Resistencia.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <span class="value-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v9"/><path d="M4 18h16"/><path d="M7 18v2"/><path d="M17 18v2"/><path d="M8 10h8"/></svg>
+            </span>
+            <h3>Comodidad</h3>
+            <p>Asientos cómodos, espacio y un viaje pensado para que llegues fresco a tu destino.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MISIÓN Y VISIÓN ================= -->
+    <section class="section section--blanco" id="mision">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Norte de la empresa</span>
+          <h2 class="section-title">Misión y <span class="hl">Visión</span></h2>
+          <p class="section-sub">Lo que somos hoy y hacia dónde caminamos mañana.</p>
+        </div>
+
+        <div class="mv-grid" data-stagger>
+          <article class="mv-card mv-card--mision reveal reveal--left">
+            <span class="mv-card__tag">Misión</span>
+            <h3>Brindar un transporte cómodo, seguro y puntual</h3>
+            <p>
+              Ofrecer servicios de viajes en ómnibus desde la ciudad de Cárdenas hacia destinos
+              locales y nacionales, garantizando la comodidad de nuestros pasajeros, la puntualidad
+              de cada salida y los mejores precios del mercado, con una atención cercana y un
+              proceso de reserva ágil mediante la APK OSTIKEC.
+            </p>
+          </article>
+
+          <article class="mv-card mv-card--vision reveal reveal--right">
+            <span class="mv-card__tag">Visión</span>
+            <h3>Ser la empresa de transporte de referencia en Matanzas</h3>
+            <p>
+              Consolidarnos como la opción preferida de pasajeros y turistas en la provincia de
+              Matanzas, ampliando nuestras rutas y modernizando continuamente el servicio, con
+              un equipo comprometido y una experiencia de viaje que nos distinga por su comodidad,
+              confiabilidad y cercanía con las personas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RUTAS ================= -->
+    <section class="section section--crema" id="rutas">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Destinos</span>
+          <h2 class="section-title">¿A dónde <span class="hl">quieres ir</span> hoy?</h2>
+          <p class="section-sub">
+            Salimos desde Cárdenas, Matanzas, hacia los principales destinos del país.
+            Consulta disponibilidad y reserva por WhatsApp en segundos.
+          </p>
+        </div>
+
+        <div class="routes" data-stagger>
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--rojo-500)"></span>
+            <h3>Santiago de Cuba</h3>
+            <p>Viaje largo con paradas cómodas y atención constante durante todo el trayecto.</p>
+            <a class="route-card__link" data-ruta="Santiago de Cuba" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--azul-500)"></span>
+            <h3>La Habana</h3>
+            <p>Salidas frecuentes hacia la capital, con horarios pensados para tu comodidad.</p>
+            <a class="route-card__link" data-ruta="La Habana" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--verde-500)"></span>
+            <h3>Sagua</h3>
+            <p>Conexión directa y segura hacia Sagua la Grande y sus alrededores.</p>
+            <a class="route-card__link" data-ruta="Sagua" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--amarillo-400)"></span>
+            <h3>Universidad de Matanzas</h3>
+            <p>Traslados para estudiantes, docentes y trabajadores con horarios adaptados.</p>
+            <a class="route-card__link" data-ruta="la Universidad de Matanzas" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--azul-500)"></span>
+            <h3>Varadero</h3>
+            <p>Playa, sol y el mejor ambiente turístico, a solo un viaje de distancia.</p>
+            <a class="route-card__link" data-ruta="Varadero" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--rojo-500)"></span>
+            <h3>Puntos turísticos y recreativos</h3>
+            <p>Excursiones a centros recreativos, playas y lugares de interés de la provincia.</p>
+            <a class="route-card__link" data-ruta="un punto turístico o recreativo" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--verde-500)"></span>
+            <h3>Viajes locales</h3>
+            <p>Movimientos dentro de Cárdenas y sus alrededores, con la misma calidad.</p>
+            <a class="route-card__link" data-ruta="un viaje local en Cárdenas" href="#">Consultar disponibilidad →</a>
+          </article>
+
+          <article class="route-card reveal">
+            <span class="route-card__dot" style="--c:var(--amarillo-400)"></span>
+            <h3>Viajes nacionales</h3>
+            <p>¿Tu destino no aparece? Coordinamos viajes a cualquier provincia del país.</p>
+            <a class="route-card__link" data-ruta="otra provincia del país" href="#">Consultar disponibilidad →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMODIDAD Y PRECIOS ================= -->
+    <section class="section section--blanco" id="comodidad">
+      <div class="container comfort">
+        <div class="comfort__text">
+          <div class="section-head section-head--left reveal">
+            <span class="eyebrow">La diferencia TCP La Resistencia</span>
+            <h2 class="section-title">Comodidad real, <span class="hl">precios reales</span></h2>
+            <p class="section-sub">
+              No se trata solo de llegar: se trata de cómo llegas. Nuestros ómnibus están
+              pensados para que el viaje sea parte del disfrute.
+            </p>
+          </div>
+
+          <ul class="check-list reveal" style="--d:120ms">
+            <li>Asientos cómodos y espacio para tus pertenencias.</li>
+            <li>Salidas puntuales, sin esperas innecesarias.</li>
+            <li>Atención personalizada antes, durante y después del viaje.</li>
+            <li>Reserva de capacidades y pasajes con la APK OSTIKEC.</li>
+            <li>Tarifas claras: <strong>los mejores precios</strong>, sin sorpresas.</li>
+          </ul>
+
+          <a href="https://wa.me/5358213831" target="_blank" rel="noopener" class="btn btn--primary reveal" style="--d:200ms">
+            Quiero reservar mi viaje
+          </a>
+        </div>
+
+        <aside class="price-card reveal reveal--right" style="--d:180ms">
+          <span class="price-card__flag">Mejores precios</span>
+          <h3>Viaja más, paga menos</h3>
+          <p class="price-card__desc">
+            Compara y compruébalo: en TCP La Resistencia obtienes la mejor relación entre
+            comodidad y precio.
+          </p>
+
+          <ul class="price-card__list">
+            <li><span>Rutas locales</span><strong>Consultar</strong></li>
+            <li><span>Rutas provinciales</span><strong>Consultar</strong></li>
+            <li><span>Rutas nacionales</span><strong>Consultar</strong></li>
+            <li><span>Reserva con OSTIKEC</span><strong>Incluida</strong></li>
+          </ul>
+
+          <a href="https://wa.me/5352475989" target="_blank" rel="noopener" class="btn btn--wa btn--full">
+            Cotizar por WhatsApp
+          </a>
+          <small class="price-card__note">Precios sujetos a destino, temporada y disponibilidad.</small>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= APK OSTIKEC ================= -->
+    <section class="section section--dark" id="ostikec">
+      <div class="container ostikec">
+        <div class="ostikec__text">
+          <span class="pill pill--light reveal">Tecnología a tu favor</span>
+          <h2 class="section-title section-title--light reveal" style="--d:80ms">
+            Reserva con la <span class="hl hl--amarillo">APK OSTIKEC</span>
+          </h2>
+          <p class="section-sub section-sub--light reveal" style="--d:140ms">
+            En <strong>TCP La Resistencia</strong> utilizamos la APK OSTIKEC para la reserva de
+            capacidades de viajes y pasajes. Un proceso rápido, ordenado y confiable que te
+            garantiza tu asiento antes de salir de casa.
+          </p>
+
+          <ul class="check-list check-list--light reveal" style="--d:200ms">
+            <li>Reserva de capacidades de viajes y pasajes.</li>
+            <li>Consulta de disponibilidad en tiempo real.</li>
+            <li>Confirmación rápida y sin filas.</li>
+            <li>Atención directa por WhatsApp para cualquier ajuste.</li>
+          </ul>
+
+          <div class="ostikec__actions reveal" style="--d:260ms">
+            <a href="https://wa.me/5358213831" target="_blank" rel="noopener" class="btn btn--wa">Reservar ahora</a>
+            <a href="#contacto" class="btn btn--ghost">Ver contactos</a>
+          </div>
+        </div>
+
+        <div class="ostikec__art reveal reveal--right" style="--d:200ms">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__bar">OSTIKEC</div>
+              <div class="phone__body">
+                <div class="phone__row"><span>Origen</span><strong>Cárdenas</strong></div>
+                <div class="phone__row"><span>Destino</span><strong>Varadero</strong></div>
+                <div class="phone__row"><span>Asientos</span><strong>Disponibles</strong></div>
+                <div class="phone__btn">Reservar pasaje</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EQUIPO ================= -->
+    <section class="section section--crema" id="equipo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nuestro equipo</span>
+          <h2 class="section-title">Personas que te <span class="hl">llevan lejos</span></h2>
+          <p class="section-sub">Detrás de cada salida hay un equipo comprometido con tu viaje.</p>
+        </div>
+
+        <article class="leader reveal">
+          <div class="leader__avatar" aria-hidden="true">DD</div>
+          <div class="leader__info">
+            <span class="leader__role">Gerente General</span>
+            <h3>Dayana de la Caridad Domínguez Rivero</h3>
+            <p>
+              “En TCP La Resistencia cada pasajero es parte de la familia. Trabajamos para que
+              viajes cómodo, seguro y al mejor precio; esa es nuestra forma de resistir y de crecer.”
+            </p>
+            <a href="https://wa.me/5358213831" target="_blank" rel="noopener" class="btn btn--outline">
+              Contactar a la dirección
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section section--blanco" id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2 class="section-title">Reserva tu viaje <span class="hl">en un mensaje</span></h2>
+          <p class="section-sub">
+            Escríbenos por WhatsApp, dinos tu destino y te confirmamos disponibilidad,
+            horario y precio al instante.
+          </p>
+        </div>
+
+        <div class="contact-grid" data-stagger>
+          <a class="contact-card reveal" href="https://wa.me/5358213831" target="_blank" rel="noopener">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2Zm0 18.1c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a8.13 8.13 0 0 1-1.25-4.31c0-4.5 3.66-8.16 8.16-8.16s8.16 3.66 8.16 8.16-3.66 8.2-8.02 8.2Zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.65.8-.8.96-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+            </span>
+            <span class="contact-card__label">WhatsApp principal</span>
+            <strong>+53 5 821 3831</strong>
+            <small>Toca para escribir ahora</small>
+          </a>
+
+          <a class="contact-card reveal" href="https://wa.me/5352475989" target="_blank" rel="noopener">
+            <span class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2Zm0 18.1c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a8.13 8.13 0 0 1-1.25-4.31c0-4.5 3.66-8.16 8.16-8.16s8.16 3.66 8.16 8.16-3.66 8.2-8.02 8.2Zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.65.8-.8.96-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+            </span>
+            <span class="contact-card__label">WhatsApp alternativo</span>
+            <strong>+53 5 247 5989</strong>
+            <small>Toca para escribir ahora</small>
+          </a>
+        </div>
+
+        <div class="info-strip reveal" style="--d:150ms">
+          <div class="info-strip__item">
+            <strong>Base</strong>
+            <span>Cárdenas, Matanzas, Cuba</span>
+          </div>
+          <div class="info-strip__item">
+            <strong>Reservas</strong>
+            <span>APK OSTIKEC + WhatsApp</span>
+          </div>
+          <div class="info-strip__item">
+            <strong>Dirección general</strong>
+            <span>Dayana de la Caridad Domínguez Rivero</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--lg">TCP</span>
+        <h3>TCP La Resistencia</h3>
+        <p>Viajes en ómnibus desde Cárdenas, Matanzas, hacia toda Cuba. Comodidad, seguridad y los mejores precios.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegación</h4>
+        <a href="#acerca">Acerca de</a>
+        <a href="#mision">Misión y Visión</a>
+        <a href="#rutas">Rutas</a>
+        <a href="#comodidad">Comodidad y Precios</a>
+        <a href="#ostikec">APK OSTIKEC</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/5358213831" target="_blank" rel="noopener">+53 5 821 3831</a>
+        <a href="https://wa.me/5352475989" target="_blank" rel="noopener">+53 5 247 5989</a>
+        <span>Cárdenas, Matanzas, Cuba</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2025</span> TCP La Resistencia. Todos los derechos reservados.</p>
+      <p>Reservas con la APK OSTIKEC · Tu viaje, nuestra fuerza.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" href="https://wa.me/5358213831" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2Zm0 18.1c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.14.82.84-3.06-.2-.31a8.13 8.13 0 0 1-1.25-4.31c0-4.5 3.66-8.16 8.16-8.16s8.16 3.66 8.16 8.16-3.66 8.2-8.02 8.2Zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.65.8-.8.96-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.12.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+  </a>
+
+  <noscript>
+    <style>.reveal{opacity:1 !important;transform:none !important}</style>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
